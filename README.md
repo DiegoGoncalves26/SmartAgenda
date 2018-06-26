@@ -1,4 +1,4 @@
-Projeto destinado a criar uma agenda inteligente, onde o foco principal e cruzar as agendas dos usuários e disponibilizar uma melhor data para marcar um encontro entre ambos.<br>
+Projeto destinado a criar uma agenda inteligente, onde o foco principal e cruzar as agendas dos usuários e disponibilizar uma melhor data para marcar um encontro entre ambos. As tecnologias utilizadas neste projeto são, Angular, Framework PrimeNG para estilização, e integração com Back-End feita através do Framework Spring Boot.<br>
 Tela principal do sistema:
 
 ![print3](https://user-images.githubusercontent.com/29154390/41882111-71805b24-78bd-11e8-93bd-4635b7e4d846.png)
