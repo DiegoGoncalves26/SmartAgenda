@@ -1,0 +1,14 @@
+.navbar{
+  z-index: 1;
+  position: fixed;
+  left: 10px;
+  top: 0;
+  width: 100%;
+  margin-top: 8px;
+}
+.img{
+  width: 20%;
+  height: 2%;
+}
+
+

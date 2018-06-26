@@ -1,0 +1,40 @@
+<div class="login ui-g-12 ui-g-fluid">
+  <form action="action_page.php">
+    <div class="imgcontainer">
+      <img class="avatar" src="assets/avatar.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <span class="ui-float-label">
+        <input id="float-input" type="text" size="30" pInputText>
+        <label for="float-input">E-mail</label>
+      </span>
+
+      <input type="password" pPassword />
+
+      <div class="icons">
+
+          <a class="ui-g-6" href="#">
+             <i class="fa fa-google-plus fa-3x"  aria-hidden="true" (click)="signInWithGoogle()"></i>
+          </a>
+
+          <a class="ui-g-6" href="#">
+            <i class="fa fa-facebook-official fa-3x" aria-hidden="true" (click)="signInWithFacebook()"></i>
+          </a>
+
+      </div>
+
+
+      <button pButton type="button" routerLink="tela-user" label="Login" ></button>
+      <button pButton type="button" label="Criar Conta" routerLink="/cadastro" class="ui-button-success"></button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+        <label class="remember">
+            <input class="remember" type="checkbox" checked="checked" name="remember"> Lembrar-me
+        </label>
+        <span class="psw">Esqueceu sua <a href="#">Senha?</a></span>
+    </div>
+
+  </form>
+</div>

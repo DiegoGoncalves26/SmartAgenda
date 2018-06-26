@@ -1,0 +1,66 @@
+<div class="cadastro ui-g-12 ui-g-fluid">
+
+    <div class="ui-g-12 ui-g-fluid">
+        <form #f="ngForm" (submit)="form_submit(f)">
+
+          <div class="ui-g-6">
+              <span class="ui-inputgroup-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+              <input type="text" class="form-control" id="cep" name="cep" placeholder="CEP" ngModel #cep="ngModel"
+              (blur)="consultarCEP($event.target.value, f)">
+          </div >
+
+          <div class="ui-g-6">
+              <span class="ui-inputgroup-addon"><i class="fa fa-address-card" aria-hidden="true"></i></span><br>
+              <input type="text" id="cidade" name="cidade" ngModel #cidade="ngModel" required placeholder="Cidade"/>
+          </div>
+
+          <div class="ui-g-6">
+              <span class="ui-inputgroup-addon"><i class="fa fa-address-card" aria-hidden="true"></i></span>
+              <input type="text" id="bairro" name="bairro" ngModel #bairro="ngModel" required placeholder="Bairro"/>
+          </div>
+
+          <div class="ui-g-6">
+              <span class="ui-inputgroup-addon"><i class="fa fa-address-card" aria-hidden="true"></i></span>
+              <input type="text" id="rua" name="rua" ngModel #rua="ngModel" required placeholder="Rua"/>
+          </div>
+
+          <div class="ui-g-6">
+            <span class="ui-inputgroup-addon"><i class="fa fa-address-card" aria-hidden="true"></i></span>
+            <input type="text" id="uf" name="uf" ngModel #uf="ngModel" required placeholder="UF"/>
+        </div>
+
+        <div class="ui-g-6">
+          <span class="ui-inputgroup-addon"><i class="fa fa-address-card" aria-hidden="true"></i></span>
+          <input type="text" name="numero" ngModel required placeholder="N°"/>
+      </div>
+
+      <div class="ui-g-12">
+        <span class="ui-inputgroup-addon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span><br>
+        <textarea pInputTextarea  [rows]="3" [cols]="84" id="title" name="title" ngModel #descricao="ngModel" placeholder="Descrição"></textarea>
+      </div>
+
+      <div class="ui-g-6">
+        <span class="ui-inputgroup-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i></span><br>
+        <p-inputMask mask="9999-99-99" name="start" ngModel placeholder="Data e horário"></p-inputMask>
+      </div>
+      <div class="ui-g-6">
+        <span class="ui-inputgroup-addon"><i class="fa fa-calendar-o" aria-hidden="true"></i></span><br>
+        <p-inputMask mask="9999-99-99" name="end" ngModel placeholder="Data e horário"></p-inputMask>
+      </div>
+
+    <div class="ui-g-6 rating">
+      <br><span class="ui-inputgroup-addon"><i class="fa fa-line-chart" aria-hidden="true" ></i> Prioridade do Evento</span><br>
+      <p-rating ([ngModel])="val5" (onRate)="handleRate($event)" name="prioridade" ngModel (onCancel)="handleCancel($event)" iconOnClass="fa-circle" iconOffClass="fa-circle-o" iconCancelClass="fa-close">;</p-rating>
+      <span *ngIf="msg" style="margin-left:10px">{{msg}}</span><br>
+  </div>
+
+          <div class="button ">
+              <button pButton type="submit" (onClick)="adicionar(descricao)" label="Cadastrar Evento"></button>
+          </div>
+          <div class="button">
+            <button pButton routerLink="/tela-user" class="ui-button-success" type="button" label="Voltar"></button>
+        </div>
+      </form><br><br><br>
+    </div>
+
+  </div>

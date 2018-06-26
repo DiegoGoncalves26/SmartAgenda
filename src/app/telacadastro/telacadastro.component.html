@@ -1,0 +1,48 @@
+<div class="cadastro ui-g-12 ui-g-fluid">
+
+  <div class="ui-g-12 ui-g-fluid">
+      <form #f="ngForm" (submit)="form_submit(f)">
+
+          <div class="ui-g-6">
+              <span class="ui-inputgroup-addon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></span><br>
+              <input type="text" name="nome" ngModel pInputText placeholder="Nome Completo">
+          </div>
+
+          <div class="ui-g-6">
+              <span class="ui-inputgroup-addon"><i class="fa fa-building" aria-hidden="true"></i></span><br>
+              <input type="text" name="empresa" ngModel pInputText placeholder="Empresa">
+          </div>
+
+
+        <div class="ui-g-6">
+            <span class="ui-inputgroup-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+            <input type="text" name="email" ngModel pInputText placeholder="E-mail">
+        </div >
+
+        <div class="ui-g-6">
+            <span class="ui-inputgroup-addon"><i class="fa fa-key" aria-hidden="true"></i></span><br>
+            <input type="text" name="cpf" ngModel pInputText placeholder="CPF (999-999-999-99)">
+        </div>
+
+        <div class="ui-g-6">
+            <span class="ui-inputgroup-addon"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
+            <input pPassword type="password" name="senha" ngModel placeholder="Senha"/>
+        </div>
+
+        <div class="ui-g-6">
+            <span class="ui-inputgroup-addon"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
+            <input pPassword type="password" name="confsenha" ngModel placeholder="Confirmar Senha"/>
+        </div>
+
+
+
+        <div class="button">
+            <button pButton type="submit" label="Cadastrar"></button>
+        </div>
+        <div class="button">
+          <button pButton routerLink="" class="ui-button-success" type="button" label="Voltar"></button>
+      </div>
+    </form>
+  </div>
+
+</div>

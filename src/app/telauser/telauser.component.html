@@ -1,0 +1,19 @@
+<div class="info">
+  <span class="nomeuser"> {{ name }} </span> <img class="img" src="{{img}}"/>
+</div>
+
+<div class="novo ui-g-2">
+   <button pButton type="button" routerLink="/novo-evento" label="Novo Evento"></button>
+</div>
+
+  <div class="ui-g">
+    <div class="user ui-g-12 ui-mg-12 ui-lg-12 ui-fluid">
+      <p-schedule [events]="events" [header]="header" [locale]="es" [eventLimit]="4" [editable]="true"></p-schedule>
+    </div>
+  </div>
+
+
+
+
+
+
